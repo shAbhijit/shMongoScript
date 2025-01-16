@@ -1,6 +1,6 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const _ = require("lodash")
-const uri = "mongodb+srv://shUser:oUt8ciVlmSQkEg9T@cluster0.xuebsry.mongodb.net/?retryWrites=true&w=majority";
+const uri = process.env.dbURI;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 const collection = "product";
 const product = "swaggerhub";
